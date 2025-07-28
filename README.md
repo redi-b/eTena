@@ -40,6 +40,8 @@ Fayda is a key part of eTena:
 
 - **Fairness:** Fayda ensures everyone gets equal and fair access to medical services.Tech Stack
 
+## Tech Stack
+
 - **Frontend:**
 
   - React.js (Next.js).
@@ -59,6 +61,8 @@ Fayda is a key part of eTena:
   - Git & GitHub – version control and collaboration.
 
 ## Future Integrations
+
+While eTena is currently focused on a web-based MVP, we plan to expand its capabilities in the future to improve accessibility, usability, and reach.
 
 - **Mobile App** - A native mobile app for both patients and staff to allow smoother, on-the-go access to queue updates, medical history, and lab results.
 

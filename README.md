@@ -75,133 +75,63 @@ While eTena is currently focused on a web-based MVP, we plan to expand its capab
 - **Multilingual Support** - Interfaces in Amharic, Afaan Oromoo, and other local languages for better accessibility.
 
 
-**🚀Installation**
-This project consists of two main parts: a Backend built with Node.js and a Frontend built with Next.js. Follow the instructions below to set up and run both parts of the application.
+## Installation and Deployment
 
-Backend (Node.js)
-The backend handles all server-side logic, API endpoints, and database interactions.
+This section provides instructions to set up and run the eTena Next.js frontend locally or with Docker. The application uses TypeScript, the Next.js App Router, and Tailwind CSS.
 
-Navigate to the backend directory:
-Open your terminal or command prompt and change your current directory to the backend folder of this project:
+### Prerequisites
+- **Node.js**: Install Node.js (version 20 or later) and npm (or Yarn) from [nodejs.org](https://nodejs.org).
+- **Git**: Required to clone the repository.
+- **Docker**: For Docker setup, install Docker Desktop from [docker.com](https://www.docker.com/products/docker-desktop). Docker Compose is included with Docker Desktop.
 
-cd backend
+### Local Setup
+1. **Navigate to the frontend directory**:
+   Open a terminal and change to the `frontend` folder:
 
-Install dependencies:
-Once inside the backend directory, install all the necessary Node.js packages using npm or Yarn:
+   ```bash
+   cd frontend
+   ```
 
-npm install
-# OR
-yarn install
+2. **Install dependencies**:
+   Install the packages listed in `frontend/package.json`:
 
-This command will download and install all the packages listed in the package.json file into a node_modules folder within the backend directory.
+   ```bash
+   npm install
+   # OR
+   yarn install
+   ```
 
-Start the backend server:
-After the dependencies are installed, you can start the backend server:
+   This creates a `node_modules` folder with all dependencies.
 
-npm start
-# OR
-yarn start
+3. **Start the development server**:
+   Run the Next.js development server with hot reloading:
 
-The backend server should now be running, typically on http://localhost:5000 (or another port specified in the backend configuration).
+   ```bash
+   npm run dev
+   # OR
+   yarn dev
+   ```
 
-Frontend (Next.js)
-The frontend is a Next.js application responsible for the user interface and interacting with the backend API.
+   Open `http://localhost:3000` in your browser to view the app.
 
-Navigate to the frontend directory:
-Open a new terminal or command prompt window (or switch back to the project root and then navigate) and change your current directory to the frontend folder:
+### Docker Setup
+You can run the frontend using Docker and Docker Compose for a consistent environment. The `Dockerfile` and `docker-compose.yml` are located in the project root.
 
-cd frontend
+1. **Ensure you’re in the project root**:
+   Run commands from the directory containing `frontend/`, `Dockerfile`, and `docker-compose.yml`.
 
-Install dependencies:
-Once inside the frontend directory, install all the necessary Next.js packages using npm or Yarn:
+2. **Build and run with Docker Compose**:
+   Run the following command to build and start the frontend container:
 
-npm install
-# OR
-yarn install
+   ```bash
+   docker-compose up --build
+   ```
 
-This command will download and install all the packages listed in the package.json file into a node_modules folder within the frontend directory.
+   The app will be available at `http://localhost:3000`.
 
-Start the frontend development server:
-After the dependencies are installed, you can start the Next.js development server:
+3. **Access the application**:
+   Open `http://localhost:3000` in your browser to view the app.
 
-npm run dev
-# OR
-yarn dev
-
-The frontend application should now be running, typically on http://localhost:3000. You can open this URL in your web browser to view the application.
-
-Important Notes:
-
-Ensure you have Node.js (and npm or Yarn) installed on your system before proceeding.
-
-It's recommended to run both the backend and frontend simultaneously in separate terminal windows for full application functionality.
-
-If you encounter any issues, double-check your directory paths and ensure all commands are run from the correct location.
-
-
-
-**▶️ How to Run the App Locally**
-To run the complete application on your local machine, you need to start both the backend and frontend servers concurrently.
-
-Start the Backend Server:
-
-Open your first terminal window.
-
-Navigate to the backend directory:
-
-cd backend
-
-
-Start the server:
-
-npm start
-# OR
-yarn start
-
-
-Wait for the backend server to indicate it's running (e.g., "Server listening on port 5000").
-
-Build the Frontend Application:
-
-Open a second, separate terminal window.
-
-Navigate to the frontend directory:
-
-cd frontend
-
-
-Build the Next.js application for production:
-Note: Next.js applications must be built before they can be run in production mode.
-
-npm run build
-# OR
-yarn build
-
-
-This command will create an optimized production build in the .next directory. Wait for the build process to complete.
-
-Start the Frontend Production Server:
-
-In the same second terminal window (after the build is complete), start the Next.js production server:
-
-npm start
-# OR
-yarn start
-
-
-Wait for the frontend server to indicate it's ready (e.g., "ready - started server on 0.0.0.0:3000, url: http://localhost:3000").
-
-Access the Application:
-
-Once both servers are running, open your web browser and navigate to:
-
-http://localhost:3000
-
-
-You should now see the frontend application, which will communicate with the backend running on http://localhost:5000.
-
-Important Notes:
-
-Ensure you have completed the "Installation" steps for both the backend and frontend before attempting to run the app.
-
-Keep both terminal windows open as long as you want the application to be running. Closing either will stop that part of the application.
+### Notes
+- Run local commands from the `frontend/` directory. For Docker, use the project root.
+- If you encounter issues, ensure Node.js and Docker are installed, and check the terminal for error messages.

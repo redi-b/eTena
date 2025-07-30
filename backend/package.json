@@ -1,0 +1,19 @@
+{
+  "name": "etena",
+  "version": "1.0.0",
+  "description": "eTena is a web aoo that makes visits to medical institutions easier by combining a queue system,medical history access, and reuslt delivery. It uses Fayda's identity system to keep everything secure and fair.",
+  "license": "ISC",
+  "author": "Rediet Berhanu,Bereket Dereje,Chris Tedla",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.1.10"
+  }
+}
